@@ -562,7 +562,7 @@ class _SearchableDropdownState<T> extends State<SearchableDropdown<T>> {
               },
         child: Row(
           children: <Widget>[
-            (widget.isExpanded??false)
+            (widget.isExpanded ?? false)
                 ? Expanded(child: innerItemsWidget)
                 : innerItemsWidget,
             IconTheme(
@@ -584,7 +584,9 @@ class _SearchableDropdownState<T> extends State<SearchableDropdown<T>> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
-            (widget.isExpanded??false) ? Expanded(child: clickable) : clickable,
+            (widget.isExpanded ?? false)
+                ? Expanded(child: clickable)
+                : clickable,
             !widget.displayClearIcon
                 ? SizedBox()
                 : InkWell(
@@ -1002,7 +1004,7 @@ class _DropdownDialogState<T> extends State<DropdownDialog> {
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.end,
               children: <Widget>[
-                FlatButton(
+                ElevatedButton(
                   onPressed: () {
                     pop();
                   },
