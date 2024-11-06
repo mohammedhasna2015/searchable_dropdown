@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 
 const EdgeInsetsGeometry _kAlignedButtonPadding =
     EdgeInsetsDirectional.only(start: 16.0, end: 4.0);
@@ -374,10 +373,10 @@ class _SearchableDropdownState<T> extends State<SearchableDropdown<T>> {
   TextStyle? get _textStyle =>
       widget.style ??
       (_enabled && !(widget.readOnly ?? false)
-          ? Theme.of(context).textTheme.subtitle1
+          ? Theme.of(context).textTheme.titleMedium
           : Theme.of(context)
               .textTheme
-              .subtitle1!
+              .titleMedium!
               .copyWith(color: _disabledIconColor));
 
   bool get _enabled =>
